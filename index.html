@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mocktail Juice Town POS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                light: '#6EE7B7', // Emerald 300
+                DEFAULT: '#10B981', // Emerald 500
+                dark: '#059669',   // Emerald 600
+              },
+              accent: {
+                light: '#FDBA74', // Orange 300
+                DEFAULT: '#F97316', // Orange 500
+                dark: '#EA580C',    // Orange 600
+              },
+              secondary: {
+                  light: '#E5E7EB', // Gray 200
+                  DEFAULT: '#9CA3AF', // Gray 400
+                  dark: '#4B5563', // Gray 600
+              },
+              neutral: {
+                  50: '#F9FAFB',
+                  100: '#F3F4F6',
+                  200: '#E5E7EB',
+                  300: '#D1D5DB',
+                  400: '#9CA3AF',
+                  500: '#6B7280',
+                  600: '#4B5563',
+                  700: '#374151',
+                  800: '#1F2937',
+                  900: '#11182C',
+              }
+            },
+            keyframes: {
+              'slide-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(20px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'pulse-sm': {
+                  '0%, 100%': { transform: 'scale(1)' },
+                  '50%': { transform: 'scale(1.05)' },
+              },
+            },
+            animation: {
+                'slide-in-up': 'slide-in-up 0.4s ease-out forwards',
+                'pulse-sm': 'pulse-sm 0.5s ease-in-out',
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-neutral-50 font-sans text-neutral-800">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
